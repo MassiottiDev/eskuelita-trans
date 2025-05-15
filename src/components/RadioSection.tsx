@@ -6,7 +6,7 @@ const RadioSection = () => {
   const togglePlayback = () => {
     setIsPlaying(!isPlaying);
   };
-  return <section id="radio" className="py-[40px]">
+  return <section id="radio" className="py-[35px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
           Radio de la Eskuelita
