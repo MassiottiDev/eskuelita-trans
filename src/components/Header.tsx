@@ -10,7 +10,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <img alt="Eskuelita Trans Logo" src="/lovable-uploads/83ef2f62-7799-40e3-95b2-1b939362fb5c.jpg" className="h-10 w-10 rounded-full object-fill" />
+            <img alt="Eskuelita Trans Logo" src="src\media\Logo_Escuelita.jpg" className="h-10 w-10 rounded-full object-fill" />
             <h1 className="text-2xl font-bold text-gray-800">Eskuelita Trans</h1>
           </div>
           
