@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+
+import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
+
+// Import image assets from src/media/photos
+import photo1 from '@/media/photos/DSC_0202.jpg';
+import photo2 from '@/media/photos/DSC_0209.jpg';
+import photo3 from '@/media/photos/DSC_0213.jpg';
+import photo4 from '@/media/photos/quenospasa3.jpg';
+import photo5 from '@/media/photos/quenospasa4.jpg';
+import photo6 from '@/media/photos/quenospasa6.jpg';
+
 const AboutUs = () => {
-  const images = ["/lovable-uploads/34bae108-1059-48a8-b3a9-1fa503225ae2.png", "/lovable-uploads/505c07f7-b013-4796-a14d-5043f4c86e0a.png", "/lovable-uploads/ea670609-ad93-4e52-b6f0-5a15c6be6201.png", "/lovable-uploads/171b028c-76a5-4546-b2ff-876136ec7dab.png", "/lovable-uploads/ec3660af-4318-4d73-99ac-6fa1d0e6a70a.png", "/lovable-uploads/352e30bc-d09a-419e-8b25-761e3bc4cf45.png"];
+  const images = [photo1, photo2, photo3, photo4, photo5, photo6];
   return <section id="about" className="py-[40px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">

@@ -1,28 +1,36 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+// Import initiative images from src/media
+import estroImage from '@/media/Pares_Estro.jpg';
+import testoImage from '@/media/Pares_Testo.jpg';
+import acreditaImage from '@/media/Prueba_Acredita.jpg';
+
 const initiatives = [{
   id: 1,
   title: 'Grupo de Pares - Estrógeno',
   schedule: 'Jueves de 20:30 a 21:30',
   frequency: 'Frecuencia Semanal',
   description: 'Un grupo gratuito de pares, para que personas transfemeninas conecten y se apoyen mutuamente.',
-  imageSrc: '/lovable-uploads/8ae70828-5f29-4b52-8012-8c5f1e09ba7b.png'
+  imageSrc: estroImage
 }, {
   id: 2,
   title: 'Grupo de Pares - Testo',
   schedule: 'Jueves de 19:00 a 20:00',
   frequency: 'Frecuencia Semanal',
   description: 'Un grupo gratuito de pares, para que personas transmasculinas conecten y se apoyen mutuamente.',
-  imageSrc: '/lovable-uploads/b2153f1b-144e-48da-abb8-a2b6bfbfc95a.png'
+  imageSrc: testoImage
 }, {
   id: 3,
   title: 'Apoyo Acredita EBI',
   description: 'Apoyo a los Estudios para acreditar la Prueba "Acredita EBI" que permite culminar la educación media básica.',
   cta: 'Solicitar + Info',
   ctaLink: 'https://api.whatsapp.com/send/?phone=59899398333&text=Quiero+formar+parte+de+la+Eskuelita+Trans%2A.+Mi+nombre+es%3A+&type=phone_number&app_absent=0',
-  imageSrc: '/lovable-uploads/8d5f94f0-5fbd-4998-a11c-e61b90bea66e.png'
+  imageSrc: acreditaImage
 }];
+
 const Initiatives = () => {
   return <section id="initiatives" className="px-0 py-[40px]">
       <div className="text-center mb-10">
