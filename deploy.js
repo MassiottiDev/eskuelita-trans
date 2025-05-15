@@ -32,22 +32,13 @@ function deploy() {
     console.log(`Using base path: /${repoName}/`);
     execSync(`BASE_URL=/${repoName}/ npm run build`, { stdio: 'inherit' });
     
-    // Create a temporary package.json with the required fields
-    console.log('Setting up deployment configuration...');
-    const packageJsonPath = path.join(__dirname, 'package.json');
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    
-    // Add homepage and scripts
-    packageJson.homepage = `https://massiottidev.github.io/${repoName}`;
-    
-    // Write the updated package.json
-    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-    
-    // Deploy to GitHub Pages
+    // Instead of modifying package.json, pass the homepage as an environment variable
     console.log('Deploying to GitHub Pages...');
-    execSync('npx gh-pages -d dist', { stdio: 'inherit' });
+    const homepage = `https://massiottidev.github.io/${repoName}`;
+    execSync(`npx gh-pages -d dist --repo-url=${homepage}`, { stdio: 'inherit' });
     
-    console.log('Deployment successful! Your site should be available soon at your GitHub Pages URL.');
+    console.log('Deployment successful! Your site should be available soon at:');
+    console.log(homepage);
   } catch (error) {
     console.error('Deployment failed:', error);
     process.exit(1);

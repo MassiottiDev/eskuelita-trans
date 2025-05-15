@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - Eskuelita Trans</title>
+    <script>
+      // GitHub Pages SPA redirect hack
+      // https://github.com/rafgraph/spa-github-pages
+      const pathSegmentsToKeep = 1; // Adjust if needed based on your repo structure
+      
+      const l = window.location;
+      const repoName = l.pathname.split('/')[1]; // Gets the repo name from URL
+      
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/' + repoName + '/?/' +
+        l.pathname
+          .slice(1)
+          .split('/')
+          .slice(pathSegmentsToKeep)
+          .join('/') +
+        (l.search ? '&' + l.search.slice(1) : '') +
+        l.hash
+      );
+    </script>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      h1 {
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 2rem;
+      }
+      a {
+        color: #4f46e5;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Page Not Found</h1>
+    <p>If you're not redirected automatically, <a href="/">click here</a> to return to the homepage.</p>
+  </body>
+</html>
