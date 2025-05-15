@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
 const initiatives = [{
   id: 1,
   title: 'Grupo de Pares - Estrógeno',
@@ -20,8 +22,10 @@ const initiatives = [{
   title: 'Apoyo Acredita EBI',
   description: 'Apoyo a los Estudios para acreditar la Prueba "Acredita EBI" que permite culminar la educación media básica.',
   cta: 'Solicitar + Info',
+  ctaLink: 'https://api.whatsapp.com/send/?phone=59899398333&text=Quiero+formar+parte+de+la+Eskuelita+Trans%2A.+Mi+nombre+es%3A+&type=phone_number&app_absent=0',
   imageSrc: '/lovable-uploads/8d5f94f0-5fbd-4998-a11c-e61b90bea66e.png'
 }];
+
 const Initiatives = () => {
   return <section id="initiatives" className="px-0 py-[40px]">
       <div className="text-center mb-10">
@@ -51,12 +55,23 @@ const Initiatives = () => {
                 {initiative.description}
               </p>
               
-              {initiative.cta && <Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-800">
-                  {initiative.cta}
-                </Button>}
+              {initiative.cta && (
+                initiative.ctaLink ? (
+                  <a href={initiative.ctaLink} target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-800">
+                      {initiative.cta}
+                    </Button>
+                  </a>
+                ) : (
+                  <Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-800">
+                    {initiative.cta}
+                  </Button>
+                )
+              )}
             </CardContent>
           </Card>)}
       </div>
     </section>;
 };
+
 export default Initiatives;
