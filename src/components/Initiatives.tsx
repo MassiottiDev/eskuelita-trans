@@ -25,7 +25,7 @@ const initiatives = [
     title: 'Apoyo Acredita EBI',
     description: 'Apoyo a los Estudios para acreditar la Prueba "Acredita EBI" que permite culminar la educación media básica.',
     cta: 'Solicitar + Info',
-    imageSrc: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3'
+    imageSrc: '/lovable-uploads/8d5f94f0-5fbd-4998-a11c-e61b90bea66e.png'
   }
 ];
 
