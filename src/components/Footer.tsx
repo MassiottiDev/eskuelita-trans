@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-yellow-400 text-white">
+    <footer id="contact" className="bg-yellow-400 text-white shadow-md">
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
           <div className="flex items-center space-x-2">
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-4 border-t border-yellow-400 text-center text-sm">
+        <div className="mt-8 pt-4 border-t border-yellow-400 shadow-md text-center text-sm">
           © 2025 Eskuelita Trans. Todos los Derechos Reservados.
         </div>
       </div>
