@@ -5,39 +5,18 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-// Get repository name from package.json or git
+// Get repository name from git
 function getRepoName() {
   try {
-    // Try to get from git remote
     const remoteUrl = execSync('git config --get remote.origin.url').toString().trim();
-    const match = remoteUrl.match(/\/([^\/]+?)(?:\.git)?$/);
+    const match = remoteUrl.match(/([^\/]+?)(\.git)?$/);
     if (match && match[1]) {
       return match[1];
     }
   } catch (e) {
-    console.log('Could not get repository name from git. Using default.');
+    console.log('Could not get repository name from git:', e.message);
   }
-
   return '';
-}
-
-// Update vite.config.ts with the repository name
-function updateViteConfig() {
-  const repoName = getRepoName();
-  const configPath = path.join(__dirname, 'vite.config.ts');
-  let configContent = fs.readFileSync(configPath, 'utf-8');
-  
-  if (repoName) {
-    // For GitHub Pages, the base URL is /<repo-name>/
-    configContent = configContent.replace(
-      /base: "\/"/,
-      `base: "/${repoName}/"`
-    );
-    fs.writeFileSync(configPath, configContent);
-    console.log(`Updated vite.config.ts with base: "/${repoName}/"`);
-  } else {
-    console.log('Could not determine repository name. Using default base path.');
-  }
 }
 
 // Main function
@@ -45,12 +24,18 @@ function deploy() {
   try {
     console.log('Starting GitHub Pages deployment...');
     
-    // Update Vite config
-    updateViteConfig();
+    // Get repo name for base URL
+    const repoName = getRepoName();
     
-    // Build the project
+    // Build the project with correct base path
     console.log('Building the project...');
-    execSync('npm run build', { stdio: 'inherit' });
+    if (repoName) {
+      console.log(`Using base path: /${repoName}/`);
+      execSync(`BASE_URL=/${repoName}/ npm run build`, { stdio: 'inherit' });
+    } else {
+      console.log('No repository name found. Using default base path.');
+      execSync('npm run build', { stdio: 'inherit' });
+    }
     
     // Deploy to GitHub Pages
     console.log('Deploying to GitHub Pages...');
