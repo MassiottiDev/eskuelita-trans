@@ -1,17 +1,12 @@
-
 import React, { useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { Play, Pause, SkipBack, SkipForward } from "lucide-react";
-
 const RadioSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  
   const togglePlayback = () => {
     setIsPlaying(!isPlaying);
   };
-  
-  return (
-    <section id="radio" className="py-16">
+  return <section id="radio" className="py-[40px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
           Radio de la Eskuelita
@@ -36,10 +31,7 @@ const RadioSection = () => {
               <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
                 <SkipBack size={20} />
               </button>
-              <button 
-                className="p-3 rounded-full bg-yellow-400 text-gray-900 hover:bg-yellow-300 transition-colors"
-                onClick={togglePlayback}
-              >
+              <button className="p-3 rounded-full bg-yellow-400 text-gray-900 hover:bg-yellow-300 transition-colors" onClick={togglePlayback}>
                 {isPlaying ? <Pause size={24} /> : <Play size={24} />}
               </button>
               <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
@@ -49,13 +41,13 @@ const RadioSection = () => {
             
             <div className="hidden md:flex space-x-2">
               <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" x2="12" y1="15" y2="3" /></svg>
               </button>
               <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" x2="15.42" y1="13.51" y2="17.49" /><line x1="15.41" x2="8.59" y1="6.51" y2="10.49" /></svg>
               </button>
               <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
               </button>
             </div>
           </div>
@@ -74,10 +66,7 @@ const RadioSection = () => {
             <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
               <SkipBack size={20} />
             </button>
-            <button 
-              className="p-4 rounded-full bg-yellow-400 text-gray-900 hover:bg-yellow-300 transition-colors"
-              onClick={togglePlayback}
-            >
+            <button className="p-4 rounded-full bg-yellow-400 text-gray-900 hover:bg-yellow-300 transition-colors" onClick={togglePlayback}>
               {isPlaying ? <Pause size={24} /> : <Play size={24} />}
             </button>
             <button className="p-2 rounded-full hover:bg-gray-800 transition-colors">
@@ -86,8 +75,6 @@ const RadioSection = () => {
           </div>
         </div>
       </Card>
-    </section>
-  );
+    </section>;
 };
-
 export default RadioSection;
