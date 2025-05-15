@@ -23,7 +23,7 @@ const initiatives = [{
   imageSrc: '/lovable-uploads/8d5f94f0-5fbd-4998-a11c-e61b90bea66e.png'
 }];
 const Initiatives = () => {
-  return <section id="initiatives" className="px-0 py-[25px]">
+  return <section id="initiatives" className="px-0 py-[40px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
           Iniciativas
