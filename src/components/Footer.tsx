@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-4 pt-4 border-t border-yellow-500 text-center text-sm">
+        <div className="mt-8 pt-4 border-t border-yellow-500 text-center text-sm">
           © 2025 Eskuelita Trans. Todos los Derechos Reservados.
         </div>
       </div>
