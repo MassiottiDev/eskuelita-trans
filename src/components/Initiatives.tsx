@@ -53,7 +53,7 @@ const Initiatives = () => {
               </p>
               
               {initiative.cta && (initiative.ctaLink ? <a href={initiative.ctaLink} target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-800 my-0 mt-4">
+                    <Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-800 my-0 ">
                       {initiative.cta}
                     </Button>
                   </a> : <Button className="bg-yellow-500 hover:bg-yellow-600 text-gray-800">
