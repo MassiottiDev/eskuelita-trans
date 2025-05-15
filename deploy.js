@@ -16,7 +16,7 @@ function getRepoName() {
   } catch (e) {
     console.log('Could not get repository name from git:', e.message);
   }
-  return '';
+  return 'eskuelita-trans'; // Default to your repo name if we can't detect it
 }
 
 // Main function
@@ -29,13 +29,19 @@ function deploy() {
     
     // Build the project with correct base path
     console.log('Building the project...');
-    if (repoName) {
-      console.log(`Using base path: /${repoName}/`);
-      execSync(`BASE_URL=/${repoName}/ npm run build`, { stdio: 'inherit' });
-    } else {
-      console.log('No repository name found. Using default base path.');
-      execSync('npm run build', { stdio: 'inherit' });
-    }
+    console.log(`Using base path: /${repoName}/`);
+    execSync(`BASE_URL=/${repoName}/ npm run build`, { stdio: 'inherit' });
+    
+    // Create a temporary package.json with the required fields
+    console.log('Setting up deployment configuration...');
+    const packageJsonPath = path.join(__dirname, 'package.json');
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    
+    // Add homepage and scripts
+    packageJson.homepage = `https://massiottidev.github.io/${repoName}`;
+    
+    // Write the updated package.json
+    fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
     
     // Deploy to GitHub Pages
     console.log('Deploying to GitHub Pages...');
