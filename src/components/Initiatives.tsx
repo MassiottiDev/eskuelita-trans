@@ -10,7 +10,7 @@ const initiatives = [
     schedule: 'Jueves de 20:30 a 21:30',
     frequency: 'Frecuencia Semanal',
     description: 'Un grupo gratuito de pares, para que personas transfemeninas conecten y se apoyen mutuamente.',
-    imageSrc: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3'
+    imageSrc: '/lovable-uploads/8ae70828-5f29-4b52-8012-8c5f1e09ba7b.png'
   },
   {
     id: 2,
