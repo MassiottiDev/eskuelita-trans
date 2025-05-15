@@ -1,8 +1,25 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 const AboutUs = () => {
+  const images = [
+    "/lovable-uploads/34bae108-1059-48a8-b3a9-1fa503225ae2.png",
+    "/lovable-uploads/505c07f7-b013-4796-a14d-5043f4c86e0a.png",
+    "/lovable-uploads/ea670609-ad93-4e52-b6f0-5a15c6be6201.png",
+    "/lovable-uploads/171b028c-76a5-4546-b2ff-876136ec7dab.png",
+    "/lovable-uploads/ec3660af-4318-4d73-99ac-6fa1d0e6a70a.png",
+    "/lovable-uploads/352e30bc-d09a-419e-8b25-761e3bc4cf45.png"
+  ];
+
   return (
     <section id="about" className="py-16">
       <div className="text-center mb-10">
@@ -38,22 +55,30 @@ const AboutUs = () => {
         </CardContent>
       </Card>
       
-      <div className="mt-10 bg-gray-100 rounded-lg overflow-hidden">
-        <div className="relative w-full h-64">
-          <img 
-            src="https://images.unsplash.com/photo-1596075780750-81249df16d19?q=80&w=1000&auto=format&fit=crop"
-            alt="Community gathering"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 flex items-center justify-between px-4">
-            <button className="bg-white/70 hover:bg-white p-2 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6"><path d="m15 18-6-6 6-6"/></svg>
-            </button>
-            <button className="bg-white/70 hover:bg-white p-2 rounded-full">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6"><path d="m9 18 6-6-6-6"/></svg>
-            </button>
+      <div className="mt-10 mx-auto max-w-3xl">
+        <Carousel className="w-full">
+          <CarouselContent>
+            {images.map((image, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <Card className="overflow-hidden border-0">
+                    <div className="h-80 w-full relative">
+                      <img 
+                        src={image} 
+                        alt={`Eskuelita Trans - Imagen ${index + 1}`} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center mt-4">
+            <CarouselPrevious className="static transform-none mx-2" />
+            <CarouselNext className="static transform-none mx-2" />
           </div>
-        </div>
+        </Carousel>
       </div>
     </section>
   );
