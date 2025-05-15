@@ -1,27 +1,10 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
-
 const AboutUs = () => {
-  const images = [
-    "/lovable-uploads/34bae108-1059-48a8-b3a9-1fa503225ae2.png",
-    "/lovable-uploads/505c07f7-b013-4796-a14d-5043f4c86e0a.png",
-    "/lovable-uploads/ea670609-ad93-4e52-b6f0-5a15c6be6201.png",
-    "/lovable-uploads/171b028c-76a5-4546-b2ff-876136ec7dab.png",
-    "/lovable-uploads/ec3660af-4318-4d73-99ac-6fa1d0e6a70a.png",
-    "/lovable-uploads/352e30bc-d09a-419e-8b25-761e3bc4cf45.png"
-  ];
-
-  return (
-    <section id="about" className="py-16">
+  const images = ["/lovable-uploads/34bae108-1059-48a8-b3a9-1fa503225ae2.png", "/lovable-uploads/505c07f7-b013-4796-a14d-5043f4c86e0a.png", "/lovable-uploads/ea670609-ad93-4e52-b6f0-5a15c6be6201.png", "/lovable-uploads/171b028c-76a5-4546-b2ff-876136ec7dab.png", "/lovable-uploads/ec3660af-4318-4d73-99ac-6fa1d0e6a70a.png", "/lovable-uploads/352e30bc-d09a-419e-8b25-761e3bc4cf45.png"];
+  return <section id="about" className="py-[10px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
           Sobre la Eskuelita Trans
@@ -58,21 +41,15 @@ const AboutUs = () => {
       <div className="mt-10 mx-auto max-w-3xl">
         <Carousel className="w-full">
           <CarouselContent>
-            {images.map((image, index) => (
-              <CarouselItem key={index}>
+            {images.map((image, index) => <CarouselItem key={index}>
                 <div className="p-1">
                   <Card className="overflow-hidden border-0">
                     <div className="h-80 w-full relative">
-                      <img 
-                        src={image} 
-                        alt={`Eskuelita Trans - Imagen ${index + 1}`} 
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={image} alt={`Eskuelita Trans - Imagen ${index + 1}`} className="w-full h-full object-cover" />
                     </div>
                   </Card>
                 </div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
           <div className="flex justify-center mt-4">
             <CarouselPrevious className="static transform-none mx-2" />
@@ -80,8 +57,6 @@ const AboutUs = () => {
           </div>
         </Carousel>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;
