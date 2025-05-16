@@ -38,12 +38,6 @@ const talleres = [
     imageSrc: taller3,
     url: "https://example.com/taller-arte"
   },
-  {
-    id: 4,
-    title: "Taller de Comunicación",
-    imageSrc: taller4,
-    url: "https://example.com/taller-comunicacion"
-  }
 ];
 
 const TalleresActivos = () => {
