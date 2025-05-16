@@ -21,22 +21,11 @@ const AboutUs = () => {
       
       <Card className="bg-white/90 shadow-lg border-0">
         <CardContent className="p-8">
-          <p className="mb-4">La Eskuelita Trans* nació a mediados de 2023 del encuentro de un grupo de personas trans con un deseo compartido: intercambiar experiencias y saberes sobre su paso por diversas instituciones educativas. Desde sus roles como docentes, educadores, trabajadores sociales y participantes de espacios informales de aprendizaje, comenzaron a tejer una red de apoyo y conocimiento mutuo.</p>
+          <p className="mb-4">La Eskuelita Trans* nació a mediados de 2023 del encuentro de un grupo de personas trans* con un deseo compartido: intercambiar experiencias y saberes sobre su paso por diversas instituciones educativas. Desde sus roles como docentes, educadores, trabajadores sociales y participantes de espacios informales de aprendizaje, comenzaron a tejer una red de apoyo y conocimiento mutuo.</p>
           
-          <p className="mb-4">
-            A medida que este grupo se fortalecía, una visión clara emergió: la creación de un espacio de 
-            referencia para otras personas trans, travestis y no binarias que anhelan continuar sus estudios 
-            formales. Este anhelo colectivo responde a la preocupante realidad que enfrentan las identidades 
-            trans en Uruguay en relación al acceso y la permanencia en el sistema educativo.
-          </p>
+          <p className="mb-4">A medida que este grupo se fortalecía, una visión clara emergió: la creación de un espacio de referencia para otras personas trans*, travestis y no binarias que anhelan continuar sus estudios formales. Este anhelo colectivo responde a la preocupante realidad que enfrentan las identidades trans* en Uruguay en relación al acceso y la permanencia en el sistema educativo.</p>
           
-          <p>
-            En este contexto, La Eskuelita Trans se erige como un faro de autonomía y resistencia. Nuestro 
-            propósito fundamental es contrarrestar activamente los mecanismos de expulsión y exclusión que 
-            históricamente han marginado a las personas trans de la vida social y cultural. Para ello, ofrecemos 
-            propuestas educativas inclusivas diseñadas desde nuestras propias experiencias y necesidades, 
-            construyendo así un camino hacia la plena participación y el desarrollo de nuestra comunidad.
-          </p>
+          <p>En este contexto, La Eskuelita Trans* se erige como un faro de autonomía y resistencia. Nuestro propósito fundamental es contrarrestar activamente los mecanismos de expulsión y exclusión que históricamente han marginado a las personas trans* de la vida social y cultural. Para ello, ofrecemos propuestas educativas inclusivas diseñadas desde nuestras propias experiencias y necesidades, construyendo así un camino hacia la plena participación y el desarrollo de nuestra comunidad.</p>
         </CardContent>
       </Card>
       
