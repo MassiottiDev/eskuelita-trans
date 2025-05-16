@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import TalleresActivos from "@/components/TalleresActivos";
 import AboutUs from "@/components/AboutUs";
 import Initiatives from "@/components/Initiatives";
 import RadioSection from "@/components/RadioSection";
@@ -13,6 +14,7 @@ const Index = () => {
       <Header />
       
       <main className="container mx-auto px-4 py-8">
+        <TalleresActivos />
         <AboutUs />
         <Initiatives />
         <RadioSection />
