@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -31,13 +30,7 @@ const AboutUs = () => {
             trans en Uruguay en relación al acceso y la permanencia en el sistema educativo.
           </p>
           
-          <p>
-            En este contexto, La Eskuelita Trans se erige como un faro de autonomía y resistencia. Nuestro 
-            propósito fundamental es contrarrestar activamente los mecanismos de expulsión y exclusión que 
-            históricamente han marginado a las personas trans de la vida social y cultural. Para ello, ofrecemos 
-            propuestas educativas inclusivas diseñadas desde nuestras propias experiencias y necesidades, 
-            construyendo así un camino hacia la plena participación y el desarrollo de nuestra comunidad.
-          </p>
+          <p>En este contexto, La Eskuelita Trans* se erige como un faro de autonomía y resistencia. Nuestro propósito fundamental es contrarrestar activamente los mecanismos de expulsión y exclusión que históricamente han marginado a las personas trans* de la vida social y cultural. Para ello, ofrecemos propuestas educativas inclusivas diseñadas desde nuestras propias experiencias y necesidades, construyendo así un camino hacia la plena participación y el desarrollo de nuestra comunidad.</p>
         </CardContent>
       </Card>
       
