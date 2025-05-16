@@ -35,7 +35,7 @@ const Initiatives = () => {
   return <section id="initiatives" className="px-0 py-[40px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
-          Iniciativas
+          Espacios Permanentes
           <span className="absolute bottom-0 left-0 right-0 h-1 bg-pink-500 mt-2"></span>
         </h2>
       </div>
