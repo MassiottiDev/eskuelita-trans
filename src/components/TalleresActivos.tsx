@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   Carousel, 
   CarouselContent, 
@@ -10,6 +10,7 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import useEmblaCarousel from "embla-carousel-react";
 
 // Import sample images
 import taller1 from '@/media/photos/DSC_0202.jpg';
@@ -46,6 +47,22 @@ const talleres = [
 ];
 
 const TalleresActivos = () => {
+  const [api, setApi] = useState<any>(null);
+
+  // Set up auto-advance every 15 seconds
+  useEffect(() => {
+    if (!api) return;
+
+    const autoplayInterval = setInterval(() => {
+      api.scrollNext();
+    }, 15000); // 15 seconds
+
+    // Clean up interval when component unmounts
+    return () => {
+      clearInterval(autoplayInterval);
+    };
+  }, [api]);
+
   return (
     <section id="talleres" className="py-[40px]">
       <div className="text-center mb-10">
@@ -61,6 +78,7 @@ const TalleresActivos = () => {
             align: "start",
             loop: true,
           }}
+          setApi={setApi}
           className="w-full"
         >
           <CarouselContent>
