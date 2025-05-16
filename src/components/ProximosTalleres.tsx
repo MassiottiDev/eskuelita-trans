@@ -24,20 +24,6 @@ const proximosTalleres = [
     imageSrc: proximosTaller1,
     url: "https://example.com/taller-programacion"
   },
-  {
-    id: 2,
-    title: "Taller de Fotografía",
-    date: "Junio 10, 2025",
-    imageSrc: proximosTaller2,
-    url: "https://example.com/taller-fotografia"
-  },
-  {
-    id: 3,
-    title: "Taller de Diseño Gráfico",
-    date: "Junio 15, 2025",
-    imageSrc: proximosTaller3,
-    url: "https://example.com/taller-diseno"
-  },
 ];
 
 const ProximosTalleres = () => {
