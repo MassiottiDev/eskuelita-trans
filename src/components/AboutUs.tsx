@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -10,7 +9,6 @@ import photo3 from '@/media/photos/DSC_0213.jpg';
 import photo4 from '@/media/photos/quenospasa3.jpg';
 import photo5 from '@/media/photos/quenospasa4.jpg';
 import photo6 from '@/media/photos/quenospasa6.jpg';
-
 const AboutUs = () => {
   const images = [photo1, photo2, photo3, photo4, photo5, photo6];
   return <section id="about" className="py-[40px]">
@@ -23,12 +21,7 @@ const AboutUs = () => {
       
       <Card className="bg-white/90 shadow-lg border-0">
         <CardContent className="p-8">
-          <p className="mb-4">
-            La Eskuelita Trans nació a mediados de 2023 del encuentro de un grupo de personas trans con un 
-            deseo compartido: intercambiar experiencias y saberes sobre su paso por diversas instituciones 
-            educativas. Desde sus roles como docentes, educadores, trabajadores sociales y participantes de 
-            espacios informales de aprendizaje, comenzaron a tejer una red de apoyo y conocimiento mutuo.
-          </p>
+          <p className="mb-4">La Eskuelita Trans* nació a mediados de 2023 del encuentro de un grupo de personas trans con un deseo compartido: intercambiar experiencias y saberes sobre su paso por diversas instituciones educativas. Desde sus roles como docentes, educadores, trabajadores sociales y participantes de espacios informales de aprendizaje, comenzaron a tejer una red de apoyo y conocimiento mutuo.</p>
           
           <p className="mb-4">
             A medida que este grupo se fortalecía, una visión clara emergió: la creación de un espacio de 
