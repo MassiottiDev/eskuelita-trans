@@ -38,7 +38,7 @@ const Header = () => {
         {menuOpen && <nav className="mt-4 pb-4 md:hidden">
             <div className="flex flex-col space-y-3">
               <NavLink href="#about" label="La Eskuelita" />
-              <NavLink href="#initiatives" label="Iniciativas" />
+              <NavLink href="#initiatives" label="Espacios Permanentes" />
               <NavLink href="#radio" label="Radio de la Eskuelita" />
               <NavLink href="#contact" label="Contacto" />
             </div>
