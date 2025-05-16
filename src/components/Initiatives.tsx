@@ -13,14 +13,14 @@ const initiatives = [{
   title: 'Grupo de Pares - Estrógeno',
   schedule: 'Jueves de 20:30 a 21:30',
   frequency: 'Frecuencia Semanal',
-  description: 'Un grupo gratuito de pares, para que personas transfemeninas conecten y se apoyen mutuamente.',
+  description: 'Un grupo gratuito de pares, para que personas conecten y se apoyen mutuamente.',
   imageSrc: estroImage
 }, {
   id: 2,
   title: 'Grupo de Pares - Testo',
   schedule: 'Jueves de 19:00 a 20:00',
   frequency: 'Frecuencia Semanal',
-  description: 'Un grupo gratuito de pares, para que personas transmasculinas conecten y se apoyen mutuamente.',
+  description: 'Un grupo gratuito de pares, para que personas conecten y se apoyen mutuamente.',
   imageSrc: testoImage
 }, {
   id: 3,
