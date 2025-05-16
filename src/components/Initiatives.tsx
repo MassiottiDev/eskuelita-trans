@@ -29,8 +29,8 @@ const initiatives = [{
 }, {
   id: 3,
   title: 'Apoyo Acredita EBI',
-  schedule: '',
-  frequency: '',
+  schedule: 'Consultar por Horarios',
+  frequency: 'Consultar por la Frecuencia',
   description: 'Apoyo a los Estudios para acreditar la Prueba "Acredita EBI" que permite culminar la educación media básica.',
   cta: 'Solicitar + Info',
   ctaLink: 'https://api.whatsapp.com/send/?phone=59899398333&text=Quiero+formar+parte+de+la+Eskuelita+Trans%2A.+Mi+nombre+es%3A+&type=phone_number&app_absent=0',
