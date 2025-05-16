@@ -24,7 +24,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
             <NavLink href="#about" label="La Eskuelita" />
-            <NavLink href="#initiatives" label="Iniciativas" />
+            <NavLink href="#initiatives" label="Espacios Permanentes" />
             <NavLink href="#radio" label="Radio de la Eskuelita" />
             <NavLink href="#contact" label="Contacto" />
           </nav>
