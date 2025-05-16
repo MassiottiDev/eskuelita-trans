@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -14,7 +15,7 @@ const AboutUs = () => {
   return <section id="about" className="py-[40px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
-          Sobre la Eskuelita Trans
+          Sobre la Eskuelita Trans*
           <span className="absolute bottom-0 left-0 right-0 h-1 bg-pink-500 mt-2"></span>
         </h2>
       </div>
