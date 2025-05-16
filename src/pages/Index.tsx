@@ -7,6 +7,7 @@ import ProximosTalleres from "@/components/ProximosTalleres";
 import AboutUs from "@/components/AboutUs";
 import Initiatives from "@/components/Initiatives";
 import RadioSection from "@/components/RadioSection";
+import Publicaciones from "@/components/Publicaciones";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
         <AboutUs />
         <Initiatives />
         <RadioSection />
+        <Publicaciones />
       </main>
       
       <Footer />
