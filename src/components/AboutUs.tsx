@@ -14,7 +14,7 @@ const AboutUs = () => {
   return <section id="about" className="py-[40px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
-          Sobre la Eskuelita Trans*
+          Sobre la Eskuelita Trans
           <span className="absolute bottom-0 left-0 right-0 h-1 bg-pink-500 mt-2"></span>
         </h2>
       </div>
@@ -33,7 +33,7 @@ const AboutUs = () => {
           <p>
             En este contexto, La Eskuelita Trans se erige como un faro de autonomía y resistencia. Nuestro 
             propósito fundamental es contrarrestar activamente los mecanismos de expulsión y exclusión que 
-            históricamente han marginado a las personas trans de la vida social y cultural. Para ello, ofrecemos 
+            históricamente han marginado a las personas trans* de la vida social y cultural. Para ello, ofrecemos 
             propuestas educativas inclusivas diseñadas desde nuestras propias experiencias y necesidades, 
             construyendo así un camino hacia la plena participación y el desarrollo de nuestra comunidad.
           </p>
