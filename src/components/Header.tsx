@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,12 +12,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <img
-              alt="Eskuelita Trans Logo"
-              src={logo} // Use imported image variable
-              className="h-10 w-10 rounded-full object-fill"
-            />
-            <h1 className="text-2xl font-bold text-gray-800">Eskuelita Trans</h1>
+            <img alt="Eskuelita Trans Logo" src={logo} // Use imported image variable
+          className="h-10 w-10 rounded-full object-fill" />
+            <h1 className="text-2xl font-bold text-gray-800">Eskuelita Trans*</h1>
           </div>
           
           {/* Desktop Navigation */}
@@ -46,7 +42,6 @@ const Header = () => {
       </div>
     </header>;
 };
-
 const NavLink = ({
   href,
   label
