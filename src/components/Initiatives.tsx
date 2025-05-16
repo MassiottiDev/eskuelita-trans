@@ -14,6 +14,8 @@ const initiatives = [{
   schedule: 'Jueves de 20:30 a 21:30',
   frequency: 'Frecuencia Semanal',
   description: 'Un grupo gratuito de pares, para que personas conecten y se apoyen mutuamente.',
+  cta: 'Solicitar + Info',
+  ctaLink: 'https://api.whatsapp.com/send/?phone=59899398333&text=Quiero+formar+parte+de+la+Eskuelita+Trans%2A.+Mi+nombre+es%3A+&type=phone_number&app_absent=0',
   imageSrc: estroImage
 }, {
   id: 2,
@@ -21,6 +23,8 @@ const initiatives = [{
   schedule: 'Jueves de 19:00 a 20:00',
   frequency: 'Frecuencia Semanal',
   description: 'Un grupo gratuito de pares, para que personas conecten y se apoyen mutuamente.',
+  cta: 'Solicitar + Info',
+  ctaLink: 'https://api.whatsapp.com/send/?phone=59899398333&text=Quiero+formar+parte+de+la+Eskuelita+Trans%2A.+Mi+nombre+es%3A+&type=phone_number&app_absent=0',
   imageSrc: testoImage
 }, {
   id: 3,
