@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,6 +23,7 @@ const Header = () => {
             <NavLink href="#about" label="La Eskuelita" />
             <NavLink href="#initiatives" label="Espacios Permanentes" />
             <NavLink href="#radio" label="Radio de la Eskuelita" />
+            <NavLink href="#publicaciones" label="Publicaciones" />
             <NavLink href="#contact" label="Contacto" />
           </nav>
           
@@ -36,6 +38,7 @@ const Header = () => {
               <NavLink href="#about" label="La Eskuelita" />
               <NavLink href="#initiatives" label="Espacios Permanentes" />
               <NavLink href="#radio" label="Radio de la Eskuelita" />
+              <NavLink href="#publicaciones" label="Publicaciones" />
               <NavLink href="#contact" label="Contacto" />
             </div>
           </nav>}
