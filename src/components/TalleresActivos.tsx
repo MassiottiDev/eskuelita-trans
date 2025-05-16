@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 // Import sample images
 import taller1 from '@/media/photos/DSC_0202.jpg';
@@ -22,21 +23,25 @@ const talleres = [
     id: 1,
     title: "Taller de Identidad",
     imageSrc: taller1,
+    url: "https://example.com/taller-identidad"
   },
   {
     id: 2,
     title: "Taller de Expresión",
     imageSrc: taller2,
+    url: "https://example.com/taller-expresion"
   },
   {
     id: 3,
     title: "Taller de Arte",
     imageSrc: taller3,
+    url: "https://example.com/taller-arte"
   },
   {
     id: 4,
     title: "Taller de Comunicación",
     imageSrc: taller4,
+    url: "https://example.com/taller-comunicacion"
   }
 ];
 
@@ -61,22 +66,29 @@ const TalleresActivos = () => {
           <CarouselContent>
             {talleres.map((taller) => (
               <CarouselItem key={taller.id} className="md:basis-1/2 lg:basis-1/3">
-                <Card className="border-0 shadow-md overflow-hidden">
-                  <CardContent className="p-0">
-                    <div className="relative">
-                      <AspectRatio ratio={16/9}>
-                        <img 
-                          src={taller.imageSrc} 
-                          alt={taller.title} 
-                          className="w-full h-full object-cover" 
-                        />
-                      </AspectRatio>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                        <h3 className="text-white text-xl font-bold">{taller.title}</h3>
+                <a 
+                  href={taller.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="block transition-transform hover:scale-105 cursor-pointer"
+                >
+                  <Card className="border-0 shadow-md overflow-hidden">
+                    <CardContent className="p-0">
+                      <div className="relative">
+                        <AspectRatio ratio={16/9}>
+                          <img 
+                            src={taller.imageSrc} 
+                            alt={taller.title} 
+                            className="w-full h-full object-cover" 
+                          />
+                        </AspectRatio>
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                          <h3 className="text-white text-xl font-bold">{taller.title}</h3>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </a>
               </CarouselItem>
             ))}
           </CarouselContent>
