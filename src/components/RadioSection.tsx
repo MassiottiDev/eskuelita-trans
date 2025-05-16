@@ -1,15 +1,11 @@
-
 import React, { useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { Play, Pause, SkipBack, SkipForward } from "lucide-react";
-
 const RadioSection = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  
   const togglePlayback = () => {
     setIsPlaying(!isPlaying);
   };
-  
   return <section id="radio" className="py-[40px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-800 inline-block relative">
@@ -77,15 +73,8 @@ const RadioSection = () => {
               <SkipForward size={20} />
             </button>
           </div>
-          
-          <div className="mt-6 text-center">
-            <div className="inline-block px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded-lg">
-              Trabajo en Progreso
-            </div>
-          </div>
         </div>
       </Card>
     </section>;
 };
-
 export default RadioSection;
