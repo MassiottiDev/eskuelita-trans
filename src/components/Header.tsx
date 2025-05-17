@@ -2,18 +2,20 @@
 import React, { useState } from 'react';
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/media/Logo_Escuelita.jpg"; // Correctly import the image!
+import logo from "@/media/Logo_Escuelita.jpg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  
   return <header className="bg-yellow-400 shadow-md">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <img alt="Eskuelita Trans Logo" src={logo} // Use imported image variable
+            <img alt="Eskuelita Trans Logo" src={logo}
           className="h-10 w-10 rounded-full object-fill" />
             <h1 className="text-2xl font-bold text-gray-800">Eskuelita Trans*</h1>
           </div>
@@ -45,6 +47,7 @@ const Header = () => {
       </div>
     </header>;
 };
+
 const NavLink = ({
   href,
   label
@@ -52,8 +55,31 @@ const NavLink = ({
   href: string;
   label: string;
 }) => {
-  return <a href={href} className="text-gray-800 hover:text-gray-600 font-medium transition-colors">
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Prevent default navigation
+    
+    // Extract the target element's ID from the href
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+    
+    // Scroll to the element if it exists
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  return (
+    <a 
+      href={href} 
+      className="text-gray-800 hover:text-gray-600 font-medium transition-colors"
+      onClick={handleClick}
+    >
       {label}
-    </a>;
+    </a>
+  );
 };
+
 export default Header;
